@@ -1,0 +1,29 @@
+:root { --bg:#f4f6fa; --card:#fff; --ink:#1c2333; --muted:#6b7385; --accent:#2f5bea; --danger:#d63b3b; --ok:#1c8a4b; --line:#e2e6ee; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+header { background:var(--accent); color:#fff; padding:1rem 1.5rem; }
+h1 { margin:0; font-size:1.4rem; }
+h2 { margin:0 0 .8rem; font-size:1.1rem; }
+main { max-width:1000px; margin:1.5rem auto; padding:0 1rem; display:grid; gap:1.2rem; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.2rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.9rem; }
+label { display:flex; flex-direction:column; font-size:.85rem; color:var(--muted); gap:.25rem; }
+input, select { padding:.55rem .7rem; border:1px solid var(--line); border-radius:6px; font-size:.95rem; color:var(--ink); }
+input:focus, select:focus { outline:2px solid var(--accent); }
+input[readonly] { background:#eef0f5; }
+.err { color:var(--danger); min-height:1em; }
+.actions { margin-top:1rem; display:flex; gap:.6rem; }
+button { background:var(--accent); color:#fff; border:0; border-radius:6px; padding:.55rem 1rem; cursor:pointer; font-size:.9rem; }
+button.secondary { background:#8a93a6; }
+button.danger { background:var(--danger); }
+button.small { padding:.3rem .6rem; font-size:.8rem; }
+#message { margin:.8rem 0 0; font-size:.9rem; min-height:1.2em; }
+#message.ok { color:var(--ok); } #message.error { color:var(--danger); }
+.search-row { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.6rem; }
+.search { display:flex; gap:.5rem; }
+.table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:.9rem; }
+th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { color:var(--muted); font-weight:600; }
+td.actions-cell { display:flex; gap:.4rem; }
+.empty { text-align:center; color:var(--muted); padding:1.2rem; }

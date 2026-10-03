@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Employee Management System</h1></header>
+  <main>
+    <section class="card">
+      <h2 id="form-title">Add Employee</h2>
+      <form id="emp-form" novalidate>
+        <div class="grid">
+          <label>Employee ID <input name="emp_id" id="emp_id" required maxlength="20"><small class="err" data-for="emp_id"></small></label>
+          <label>Name <input name="name" required maxlength="100"><small class="err" data-for="name"></small></label>
+          <label>Department <input name="department" required maxlength="60"><small class="err" data-for="department"></small></label>
+          <label>Designation <input name="designation" required maxlength="60"><small class="err" data-for="designation"></small></label>
+          <label>Salary (₹) <input name="salary" inputmode="decimal" required><small class="err" data-for="salary"></small></label>
+          <label>Contact <input name="contact" inputmode="numeric" maxlength="10" required><small class="err" data-for="contact"></small></label>
+        </div>
+        <div class="actions">
+          <button type="submit" id="submit-btn">Add Employee</button>
+          <button type="button" id="cancel-btn" class="secondary" hidden>Cancel edit</button>
+        </div>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="card">
+      <div class="search-row">
+        <h2>Employees <span id="count"></span></h2>
+        <div class="search">
+          <select id="search-field">
+            <option value="all">All</option>
+            <option value="id">ID</option>
+            <option value="name">Name</option>
+            <option value="department">Department</option>
+          </select>
+          <input id="search-input" type="search" placeholder="Search…">
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Designation</th><th>Salary (₹)</th><th>Contact</th><th>Actions</th></tr></thead>
+          <tbody id="emp-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
